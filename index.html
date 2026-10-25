@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Original Source Training Club</title>
+<meta name="description" content="The path of least friction to a stronger body. Remote strength and conditioning coaching: OS Training Club, the monthly group program, or individual coaching.">
+<link rel="canonical" href="https://originalsource.co/">
+
+<!-- Icons -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#FFFFFF">
+
+<!-- Link previews (Instagram, WhatsApp, iMessage, LinkedIn, X) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Original Source Training Club">
+<meta property="og:url" content="https://originalsource.co/">
+<meta property="og:title" content="Original Source Training Club">
+<meta property="og:description" content="The path of least friction to a stronger body. Remote strength and conditioning coaching.">
+<meta property="og:image" content="https://originalsource.co/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Original Source OS mark">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Visitor stats: GoatCounter (free, no cookies, so no cookie banner needed).
+     Works once Nick creates the free account with the code "ostrainingclub" at goatcounter.com. -->
+<script data-goatcounter="https://ostrainingclub.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<style>
+  :root {
+    --paper: #FFFFFF;
+    --ink: #000000;
+    --grey-600: #5C5C5C;
+    --grey-300: #D4D4D4;
+    --grey-100: #F2F2F2;
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    --wrap: 1080px;
+    --gutter: clamp(20px, 5vw, 48px);
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font); font-size: 18px; line-height: 1.55; }
+  a { color: inherit; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+
+  /* Header */
+  header { border-bottom: 1px solid var(--grey-300); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .brand { font-weight: 600; letter-spacing: -.01em; text-decoration: none; }
+  .brand span { color: var(--grey-600); font-weight: 500; }
+  .nav-cta { font-size: 15px; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
+
+  /* Type */
+  h1, h2, h3 { font-weight: 600; letter-spacing: -.02em; margin: 0; }
+  h1 { font-size: clamp(44px, 7.4vw, 88px); line-height: 1.02; max-width: 14ch; }
+  h2 { font-size: clamp(30px, 4.2vw, 44px); line-height: 1.1; }
+  h3 { font-size: 26px; line-height: 1.2; }
+  .label { align-self: start; line-height: 1.6; font-size: 16px; font-weight: 500; letter-spacing: 0; color: var(--grey-600); margin: 0 0 16px; }
+  .lede { font-size: clamp(19px, 2.2vw, 22px); color: var(--grey-600); max-width: 38ch; margin: 28px 0 0; }
+  p { margin: 0 0 16px; }
+
+  /* Buttons */
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
+  .btn { display: inline-block; padding: 16px 26px; font-size: 16px; font-weight: 600; text-decoration: none; border: 1px solid var(--ink); border-radius: 8px; }
+  .btn-solid { background: var(--ink); color: var(--paper); }
+  .btn-line { background: var(--paper); color: var(--ink); border-color: #9A9A9A; }
+  .btn:hover { opacity: .82; }
+  .btn:focus-visible, .nav-cta:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+  /* Sections */
+  section { padding: clamp(72px, 10vw, 120px) 0; border-bottom: 1px solid var(--grey-300); }
+  .hero { padding-top: clamp(64px, 12vw, 144px); }
+  .about p { font-size: clamp(20px, 2.4vw, 24px); line-height: 1.5; max-width: 34ch; }
+  .about .wrap { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; }
+
+  /* Offers */
+  .offers-head { margin-bottom: 48px; }
+  .offers { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .offers { gap: clamp(12px, 2.4vw, 24px); }
+  .offer { border: 1px solid #9A9A9A; border-radius: 14px; padding: clamp(20px, 4vw, 48px); display: flex; flex-direction: column; }  .offer .kind { font-size: 15px; color: var(--grey-600); margin: 8px 0 24px; }
+  .offer .pitch { font-size: 19px; margin-bottom: 24px; }
+  .offer ul { list-style: none; margin: 0 0 32px; padding: 0; border-top: 1px solid var(--grey-300); }
+  .offer li { padding: 14px 0; border-bottom: 1px solid var(--grey-300); font-size: 16px; }
+  .offer li b { font-weight: 600; }
+  .offer .for { font-size: 15px; color: var(--grey-600); margin-bottom: 32px; }
+  .offer .btn { margin-top: auto; text-align: center; }
+  .offer .note { font-size: 13px; color: var(--grey-600); margin: 12px 0 0; text-align: center; }
+
+  /* Testimonials */
+  .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+  blockquote { margin: 0; padding: 28px 0 0; border-top: 1px solid var(--ink); }
+  blockquote p { font-size: 18px; }
+  blockquote cite { font-style: normal; font-size: 14px; color: var(--grey-600); }
+
+  /* Coach */
+  .coach .wrap { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; }
+  .profile-link { display: inline-block; margin-top: 12px; font-size: 15px; font-weight: 500; color: var(--grey-600); text-decoration: none; border-bottom: 1px solid var(--grey-300); padding-bottom: 2px; }
+  .profile-link:hover { color: var(--ink); border-color: var(--ink); }
+  .profile-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  .coach ul { margin: 24px 0 0; padding: 0; list-style: none; }
+  .coach li { padding: 12px 0; border-top: 1px solid var(--grey-300); font-size: 16px; }
+
+  /* Final CTA */
+  .final { text-align: left; border-bottom: 0; }
+  .final h2 { max-width: 18ch; }
+
+  footer { border-top: 1px solid var(--grey-300); padding: 32px 0; font-size: 14px; color: var(--grey-600); }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+  @media (max-width: 760px) {
+    .about .wrap, .coach .wrap, .quotes { grid-template-columns: 1fr; }
+    .about .wrap, .coach .wrap { gap: 8px; }
+    .offer h3 { font-size: 22px; }
+    .offer .pitch { font-size: 17px; }
+    .offer li, .offer .for { font-size: 15px; }
+  }
+  @media (max-width: 600px) {
+    .offers { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!--
+  LINKS TO SET BEFORE GOING LIVE (search for these):
+  JOIN_LINK     Stripe Payment Link for the Training Club monthly subscription (Nick creates it).
+                Set Stripe's "after payment" to redirect to the join form (screening + welcome + WhatsApp invite).
+  CONTACT_LINK  Where "Get in touch" goes. Currently an Instagram DM to @ostrainingclub.-->
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Original Source <span>Training Club</span></a>
+    <a class="nav-cta" href="https://ig.me/m/ostrainingclub">Get in touch</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="label">Remote strength and conditioning coaching</p>
+      <h1>The path of least friction to a stronger body.</h1>
+      <p class="lede">No discipline needed. No perfect program. Training that becomes a natural part of who you are.</p>
+      <div class="btns">
+        <a class="btn btn-solid" href="#offers">See the two ways in</a>
+        <a class="btn btn-line" href="https://ig.me/m/ostrainingclub">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about">
+    <div class="wrap">
+      <p class="label">What we're about</p>
+      <div>
+        <p>You've tried the gym, the PT, the 12-week plan. It worked until it didn't, and you decided the problem was you. It isn't.</p>
+        <p>You don't need fixing. You need the friction gone: the pressure to be perfect, the rules that don't fit your life. You learn to train by feel, build a process that lasts, and get to the point where you don't need a coach at all.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offers -->
+  <section id="offers">
+    <div class="wrap">
+      <div class="offers-head">
+        <p class="label">Two ways in</p>
+        <h2>Choose how you train.</h2>
+      </div>
+
+      <div class="offers">
+        <article class="offer">
+          <h3>OS Training Club</h3>
+          <p class="kind">The monthly group program</p>
+          <p class="pitch">One program a month, three sessions a day. Do one, two or all three.</p>
+          <ul>
+            <li><b>A new program every month</b>, written by Nick.</li>
+            <li><b>Three session options a day</b> across strength, cardio, plyometrics and explosive work.</li>
+            <li><b>You choose</b> the sessions that fit your goals, and your cardio: run, row, ride, swim or ski.</li>
+            <li><b>Train by feel.</b> Effort set by how it feels, not numbers you can't read yet.</li>
+            <li><b>A community that backs you.</b> Like-minded people training their own way and supporting each other. No ego, no pressure to perform.</li>
+            <li><b>Group chat with Nick.</b> Ask a question, get a real answer.</li>
+            <li><b>Any time, anywhere.</b> No class times. Join any month.</li>
+          </ul>
+          <p class="for">For you if you want structure and a coach in your corner, train for more than one thing, or have fallen off programs before.</p>
+          <a class="btn btn-solid" href="JOIN_LINK">Join OS Training Club</a>
+          <p class="note">Monthly subscription.</p>
+        </article>
+
+        <article class="offer">
+          <h3>Individual coaching</h3>
+          <p class="kind">Programming built around you</p>
+          <p class="pitch">A program for your goal, your week and your body, with Nick in your corner.</p>
+          <ul>
+            <li><b>A quick call first</b> on your goals and where you're at.</li>
+            <li><b>A custom program</b> for any goal: strength, running, rowing, HYROX, CrossFit, sport, hypertrophy or weight loss.</li>
+            <li><b>Four-week blocks</b>, reviewed and adjusted as you go.</li>
+            <li><b>Check-ins</b>, usually Monday and Thursday, plus voice notes.</li>
+            <li><b>Remote</b>, wherever you train.</li>
+          </ul>
+          <p class="for">For you if you have a specific goal or event, an injury history to work around, or want close accountability.</p>
+          <a class="btn btn-line" href="https://ig.me/m/ostrainingclub">Get in touch</a>
+          <p class="note">Nick replies personally.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials: from the Notion Testimonials page (OS Wiki > Marketing > Testimonials, 301030282a0080eeb18bcbf2011dc017) -->
+  <section>
+    <div class="wrap">
+      <p class="label">What clients say</p>
+      <h2>Don't take our word for it.</h2>
+      <div class="quotes">
+        <blockquote><p>Nick made the whole training journey enjoyable, and the proof is in the results as I have taken my training to a whole new level, and I feel very in tuned with my body and life itself. Nick is an absolute champion and I would have no hesitations in recommending him to anyone wanting to make significant changes in their life leading to sustainable fitness outcomes.</p><cite>Stephen Wolf, Founder and Director of Bauenort</cite></blockquote>
+        <blockquote><p>Nick provided me a clear, easy to use daily program incorporating both a weights program and a rowing erg program. I needed a daily program to be about 45 minutes as it needed to be done before work. It takes the guesswork out of programming my exercise and keeps me accountable. Nick has been an excellent coach and really knows his stuff!</p><cite>Stephen Boykett, CFO at Jane Family Office</cite></blockquote>
+        <blockquote><p>Nick helped me work towards and achieve specific goals such as a 20 minute 5k and always kept my work and life routine in mind. He was always checking in to see if he could help more.</p><cite>Billy Peters, Paramedic</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coach -->
+  <section class="coach">
+    <div class="wrap">
+      <p class="label">Your coach</p>
+      <div>
+        <h2>Nick Lavery</h2>
+        <a class="profile-link" href="https://www.linkedin.com/in/nicklavery/" target="_blank" rel="noopener">View Nick on LinkedIn ↗</a>
+        <p class="lede">Olympic level coaching. Years of training and coaching taught Nick that forcing the perfect program onto people doesn't last. Training by feel does.</p>
+        <ul>
+          <li>Tokyo 2020 Olympian, men's eight</li>
+          <li>2022 World Championships bronze medallist</li>
+          <li>Strength and conditioning coach, Wesley College Melbourne</li>
+          <li>Former Mental Fitness Ambassador, Australian Institute of Sport and Black Dog Institute</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final">
+    <div class="wrap">
+      <h2>You've never been coached like this.</h2>
+      <div class="btns">
+        <a class="btn btn-solid" href="JOIN_LINK">Join OS Training Club</a>
+        <a class="btn btn-line" href="https://ig.me/m/ostrainingclub">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Original Source Training Club</span>
+    <a href="https://instagram.com/ostrainingclub">@ostrainingclub</a>
+  </div>
+</footer>
+
+</body>
+</html>
