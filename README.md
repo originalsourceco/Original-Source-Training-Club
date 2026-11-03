@@ -6,4 +6,4 @@ One static page: `index.html`, plus icons (`favicon-32.png`, `apple-touch-icon.p
 
 - **Hosting:** GitHub Pages, from the `main` branch. `CNAME` sets the custom domain.
 - **Visitor stats:** GoatCounter (`ostrainingclub.goatcounter.com`).
-- **Still to set:** the Stripe Payment Link on the two "Join OS Training Club" buttons (they send an email until then).
+- **Join buttons:** the Stripe Payment Link for OS Training Club. After payment, Stripe sends people to `/welcome` (`welcome.html`).
