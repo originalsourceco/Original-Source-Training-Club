@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome to OS Training Club</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#FFFFFF">
+<style>
+  :root {
+    --paper: #FFFFFF;
+    --ink: #000000;
+    --grey-600: #5C5C5C;
+    --grey-300: #D4D4D4;
+    --grey-100: #F2F2F2;
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    --wrap: 1080px;
+    --gutter: clamp(20px, 5vw, 48px);
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font); font-size: 18px; line-height: 1.55; }
+  a { color: inherit; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+
+  /* Header */
+  header { border-bottom: 1px solid var(--grey-300); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .brand { font-weight: 600; letter-spacing: -.01em; text-decoration: none; }
+  .brand span { color: var(--grey-600); font-weight: 500; }
+  .nav-cta { font-size: 15px; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
+
+  /* Type */
+  h1, h2, h3 { font-weight: 600; letter-spacing: -.02em; margin: 0; }
+  h1 { font-size: clamp(44px, 7.4vw, 88px); line-height: 1.02; max-width: 14ch; }
+  h2 { font-size: clamp(30px, 4.2vw, 44px); line-height: 1.1; }
+  h3 { font-size: 26px; line-height: 1.2; }
+  .label { align-self: start; line-height: 1.6; font-size: 16px; font-weight: 500; letter-spacing: 0; color: var(--grey-600); margin: 0 0 16px; }
+  .lede { font-size: clamp(19px, 2.2vw, 22px); color: var(--grey-600); max-width: 38ch; margin: 28px 0 0; }
+  p { margin: 0 0 16px; }
+
+  /* Buttons */
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
+  .btn { display: inline-block; padding: 16px 26px; font-size: 16px; font-weight: 600; text-decoration: none; border: 1px solid var(--ink); border-radius: 8px; }
+  .btn-solid { background: var(--ink); color: var(--paper); }
+  .btn-line { background: var(--paper); color: var(--ink); border-color: #9A9A9A; }
+  .btn:hover { opacity: .82; }
+  .btn:focus-visible, .nav-cta:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+  /* Sections */
+  section { padding: clamp(72px, 10vw, 120px) 0; border-bottom: 1px solid var(--grey-300); }
+  .hero { padding-top: clamp(64px, 12vw, 144px); }
+  .about p { font-size: clamp(20px, 2.4vw, 24px); line-height: 1.5; max-width: 34ch; }
+  .about .wrap { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; }
+
+  /* Offers */
+  .offers-head { margin-bottom: 48px; }
+  .offers { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .offers { gap: clamp(12px, 2.4vw, 24px); }
+  .offer { border: 1px solid #9A9A9A; border-radius: 14px; padding: clamp(20px, 4vw, 48px); display: flex; flex-direction: column; }  .offer .kind { font-size: 15px; color: var(--grey-600); margin: 8px 0 24px; }
+  .offer .pitch { font-size: 19px; margin-bottom: 24px; }
+  .offer ul { list-style: none; margin: 0 0 32px; padding: 0; border-top: 1px solid var(--grey-300); }
+  .offer li { padding: 14px 0; border-bottom: 1px solid var(--grey-300); font-size: 16px; }
+  .offer li b { font-weight: 600; }
+  .offer .for { font-size: 15px; color: var(--grey-600); margin-bottom: 32px; }
+  .offer .btn { margin-top: auto; text-align: center; }
+  .offer .note { font-size: 13px; color: var(--grey-600); margin: 12px 0 0; text-align: center; }
+
+  /* Testimonials */
+  .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+  blockquote { margin: 0; padding: 28px 0 0; border-top: 1px solid var(--ink); }
+  blockquote p { font-size: 18px; }
+  blockquote cite { font-style: normal; font-size: 14px; color: var(--grey-600); }
+
+  /* Coach */
+  .coach .wrap { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; }
+  .profile-link { display: inline-block; margin-top: 12px; font-size: 15px; font-weight: 500; color: var(--grey-600); text-decoration: none; border-bottom: 1px solid var(--grey-300); padding-bottom: 2px; }
+  .profile-link:hover { color: var(--ink); border-color: var(--ink); }
+  .profile-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  .coach ul { margin: 24px 0 0; padding: 0; list-style: none; }
+  .coach li { padding: 12px 0; border-top: 1px solid var(--grey-300); font-size: 16px; }
+
+  /* Final CTA */
+  .final { text-align: left; border-bottom: 0; }
+  .final h2 { max-width: 18ch; }
+
+  footer { border-top: 1px solid var(--grey-300); padding: 32px 0; font-size: 14px; color: var(--grey-600); }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+  @media (max-width: 760px) {
+    .about .wrap, .coach .wrap, .quotes { grid-template-columns: 1fr; }
+    .about .wrap, .coach .wrap { gap: 8px; }
+    .offer h3 { font-size: 22px; }
+    .offer .pitch { font-size: 17px; }
+    .offer li, .offer .for { font-size: 15px; }
+  }
+  @media (max-width: 600px) {
+    .offers { grid-template-columns: 1fr; }
+  }
+</style>
+<style>
+  .steps { list-style: none; margin: 48px 0 0; padding: 0; border-top: 1px solid var(--grey-300); max-width: 640px; }
+  .steps li { padding: 28px 0; border-bottom: 1px solid var(--grey-300); }
+  .steps .n { font-size: 15px; font-weight: 500; color: var(--grey-600); margin: 0 0 8px; }
+  .steps h2 { font-size: clamp(22px, 2.6vw, 26px); margin: 0 0 10px; }
+  .steps p { margin: 0; font-size: 17px; max-width: 46ch; }
+  .steps .btn { margin-top: 20px; }
+  .steps p + p { margin-top: 12px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="/">Original Source <span>Training Club</span></a>
+    <a class="nav-cta" href="mailto:nick@originalsource.co?subject=OS%20Training%20Club">Questions?</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="label">Welcome to OS Training Club</p>
+      <h1>You're in.</h1>
+      <p class="lede">Payment's done. Three quick steps and you're training.</p>
+
+      <ol class="steps">
+        <li>
+          <p class="n">Step 1</p>
+          <h2>Join the WhatsApp Community</h2>
+          <p>Announcements is where each month's program drops. The Club is the group chat: ask me anything, share how training's going and back each other up.</p>
+          <a class="btn btn-solid" href="https://chat.whatsapp.com/HXEQGDK4hP4Hz7Q1pxYVD6">Join on WhatsApp</a>
+        </li>
+        <li>
+          <p class="n">Step 2</p>
+          <h2>Check your email</h2>
+          <p>Within 24 hours I'll send your join form (a quick health check and your goals) and access to the program in Notion.</p>
+        </li>
+        <li>
+          <p class="n">Step 3</p>
+          <h2>Read this to get started</h2>
+          <p>Once you're in Notion, open "Read this to get started". It's the first page on OS Training Club Home, takes about ten minutes, and tells you everything about the program: how the month works, how to pick your sessions and how hard to go.</p>
+          <p>The short version: each month's program drops in Announcements. Every day has three sessions to choose from. Do one, two or all three, pick your own cardio, scale each session to your day, and ask me anything in the Club chat.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Original Source Training Club</span>
+    <a href="https://instagram.com/ostrainingclub">@ostrainingclub</a>
+  </div>
+</footer>
+
+</body>
+</html>
