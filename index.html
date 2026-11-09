@@ -255,10 +255,18 @@
   .offer .note { font-size: 13px; color: var(--grey-600); margin: 12px 0 0; text-align: center; }
 
   /* Testimonials */
-  .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-  blockquote { margin: 0; padding: 28px 0 0; border-top: 1px solid var(--ink); }
+  .quotes-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  .slider-nav { display: flex; align-items: center; gap: 8px; }
+  .slider-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid #9A9A9A; background: var(--paper); color: var(--ink); font-size: 18px; line-height: 1; cursor: pointer; display: grid; place-items: center; font-family: var(--font); }
+  .slider-btn:hover:not(:disabled) { border-color: var(--ink); }
+  .slider-btn:disabled { opacity: .3; cursor: default; }
+  .slider-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  .quotes { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 48px) / 3); gap: 24px; margin-top: 48px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .quotes::-webkit-scrollbar { display: none; }
+  blockquote { margin: 0; padding: 28px 0 0; border-top: 1px solid var(--ink); scroll-snap-align: start; display: flex; flex-direction: column; }
   blockquote p { font-size: 18px; }
-  blockquote cite { font-style: normal; font-size: 14px; color: var(--grey-600); }
+  blockquote cite { font-style: normal; font-size: 14px; color: var(--grey-600); margin-top: auto; }
+  @media (max-width: 900px) { .quotes { grid-auto-columns: calc((100% - 24px) / 2); } }
 
   /* Coach */
   .coach .wrap { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; }
@@ -294,7 +302,8 @@
   footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 
   @media (max-width: 760px) {
-    .about .wrap, .coach .wrap, .quotes { grid-template-columns: 1fr; }
+    .about .wrap, .coach .wrap { grid-template-columns: 1fr; }
+    .quotes { grid-auto-columns: 86%; gap: 16px; }
     .faq-item h3 { font-size: 18px; }
     .about .wrap, .coach .wrap { gap: 8px; }
     .offer h3 { font-size: 22px; }
@@ -393,15 +402,25 @@
     </div>
   </section>
 
-  <!-- Testimonials: from the Notion Testimonials page (OS Wiki > Marketing > Testimonials, 301030282a0080eeb18bcbf2011dc017) -->
+  <!-- Testimonials: trimmed from the Notion Testimonials page (301030282a0080eeb18bcbf2011dc017) and the OS Testimonials and Feedback database. Slider: add a blockquote to add a testimonial. -->
   <section>
     <div class="wrap">
       <p class="label">What clients say</p>
-      <h2>Don't take our word for it.</h2>
-      <div class="quotes">
-        <blockquote><p>Nick made the whole training journey enjoyable, and the proof is in the results as I have taken my training to a whole new level, and I feel very in tuned with my body and life itself. Nick is an absolute champion and I would have no hesitations in recommending him to anyone wanting to make significant changes in their life leading to sustainable fitness outcomes.</p><cite>Stephen Wolf, Founder and Director of Bauenort</cite></blockquote>
-        <blockquote><p>Nick provided me a clear, easy to use daily program incorporating both a weights program and a rowing erg program. I needed a daily program to be about 45 minutes as it needed to be done before work. It takes the guesswork out of programming my exercise and keeps me accountable. Nick has been an excellent coach and really knows his stuff!</p><cite>Stephen Boykett, CFO at Jane Family Office</cite></blockquote>
+      <div class="quotes-head">
+        <h2>Don't take our word for it.</h2>
+        <div class="slider-nav">
+          <button class="slider-btn" type="button" data-dir="-1" aria-label="Previous testimonials">&larr;</button>
+          <button class="slider-btn" type="button" data-dir="1" aria-label="Next testimonials">&rarr;</button>
+        </div>
+      </div>
+      <div class="quotes" tabindex="0" aria-label="Client testimonials">
+        <blockquote><p>Nick made the whole training journey enjoyable, and the proof is in the results as I have taken my training to a whole new level. I would have no hesitations in recommending him to anyone wanting to make significant changes in their life leading to sustainable fitness outcomes.</p><cite>Stephen Wolf, Founder and Director of Bauenort</cite></blockquote>
         <blockquote><p>Nick helped me work towards and achieve specific goals such as a 20 minute 5k and always kept my work and life routine in mind. He was always checking in to see if he could help more.</p><cite>Billy Peters, Paramedic</cite></blockquote>
+        <blockquote><p>Nick provided me a clear, easy to use daily program incorporating both a weights program and a rowing erg program. It takes the guesswork out of programming my exercise and keeps me accountable. Nick has been an excellent coach and really knows his stuff!</p><cite>Stephen Boykett, CFO at Jane Family Office</cite></blockquote>
+        <blockquote><p>As a beginner runner training for my first major race, I was particularly anxious about my performance. Nick took the time to deeply understand my unique circumstances and goals. My pre-race nerves were transformed into (mostly) focused excitement.</p><cite>Kristy Toogood, Founder and Director of Digital Solutions Kristy</cite></blockquote>
+        <blockquote><p>I learnt many new ways to train and build physical and mental strength in areas that I have not been as experienced in the past. I found it easy to communicate with the coach and felt very accommodated for.</p><cite>Max Boykett, Student and Competitive Rower</cite></blockquote>
+        <blockquote><p>Nick's coaching helped me improve both in and out of sport, which has benefited me in so many ways. I am now more in touch with myself and am able to grow as an athlete and an individual.</p><cite>Eleazar Meola, Athlete at Global Football Academy</cite></blockquote>
+        <blockquote><p>Making the choice to work with Nick could be the part that helps you take that next step in your fitness and mental journey.</p><cite>Jack Cleary, Tokyo 2020 Olympic Bronze Medallist</cite></blockquote>
       </div>
     </div>
   </section>
@@ -472,5 +491,25 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  var track = document.querySelector('.quotes');
+  if (!track) return;
+  var cards = track.querySelectorAll('blockquote');
+  var prev = document.querySelector('.slider-btn[data-dir="-1"]');
+  var next = document.querySelector('.slider-btn[data-dir="1"]');
+  function step() { return cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : track.clientWidth; }
+  function update() {
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+  }
+  [prev, next].forEach(function (b) {
+    b.addEventListener('click', function () { track.scrollBy({ left: step() * Number(b.dataset.dir), behavior: 'smooth' }); });
+  });
+  track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
+</script>
 </body>
 </html>
