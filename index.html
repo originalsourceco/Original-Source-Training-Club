@@ -493,22 +493,47 @@
 
 <script>
 (function () {
+  // Endless testimonial carousel: the quotes are copied once before and once after the real set,
+  // and the track quietly jumps back to the middle set whenever it drifts into a copy.
   var track = document.querySelector('.quotes');
   if (!track) return;
-  var cards = track.querySelectorAll('blockquote');
-  var prev = document.querySelector('.slider-btn[data-dir="-1"]');
-  var next = document.querySelector('.slider-btn[data-dir="1"]');
-  function step() { return cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : track.clientWidth; }
-  function update() {
-    prev.disabled = track.scrollLeft <= 2;
-    next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
-  }
-  [prev, next].forEach(function (b) {
-    b.addEventListener('click', function () { track.scrollBy({ left: step() * Number(b.dataset.dir), behavior: 'smooth' }); });
+  var originals = Array.prototype.slice.call(track.querySelectorAll('blockquote'));
+  var n = originals.length;
+  if (n < 2) return;
+  originals.forEach(function (c) {
+    var copy = c.cloneNode(true); copy.setAttribute('aria-hidden', 'true'); track.appendChild(copy);
   });
-  track.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
-  window.addEventListener('resize', update);
-  update();
+  originals.slice().reverse().forEach(function (c) {
+    var copy = c.cloneNode(true); copy.setAttribute('aria-hidden', 'true'); track.insertBefore(copy, track.firstChild);
+  });
+  var cards = track.children;
+  function step() { return cards[1].offsetLeft - cards[0].offsetLeft; }
+  function setWidth() { return step() * n; }
+  function jumpTo(x) {
+    track.style.scrollSnapType = 'none';
+    track.scrollLeft = x;
+    void track.offsetWidth;
+    track.style.scrollSnapType = '';
+  }
+  function recentre() {
+    var w = setWidth(), s = step(), x = track.scrollLeft;
+    if (x < w - s / 2) jumpTo(x + w);
+    else if (x >= 2 * w - s / 2) jumpTo(x - w);
+  }
+  var settle;
+  track.addEventListener('scroll', function () {
+    clearTimeout(settle); settle = setTimeout(recentre, 150);
+  }, { passive: true });
+  document.querySelectorAll('.slider-btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      track.scrollBy({ left: step() * Number(b.dataset.dir), behavior: 'smooth' });
+    });
+  });
+  window.addEventListener('resize', function () {
+    var i = Math.round(track.scrollLeft / step()) % n;
+    jumpTo(setWidth() + i * step());
+  });
+  jumpTo(setWidth());
 })();
 </script>
 </body>
