@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inside the Club | Original Source Training Club</title>
+<meta name="description" content="See exactly what you get inside Original Source Training Club: the monthly group program and individual coaching, page by page.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://originalsource.co/inside">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="96x96" href="/icon-96.png?v=2">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#FFFFFF">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Original Source Training Club">
+<meta property="og:url" content="https://originalsource.co/inside">
+<meta property="og:title" content="Inside Original Source Training Club">
+<meta property="og:description" content="See exactly what you get, page by page.">
+<meta property="og:image" content="https://originalsource.co/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<script data-goatcounter="https://ostrainingclub.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<style>
+  :root {
+    --paper: #FFFFFF;
+    --ink: #000000;
+    --grey-600: #5C5C5C;
+    --grey-300: #D4D4D4;
+    --grey-100: #F2F2F2;
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    --wrap: 1180px;
+    --gutter: clamp(20px, 5vw, 48px);
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font); font-size: 18px; line-height: 1.55; }
+  a { color: inherit; }
+  img { display: block; max-width: 100%; height: auto; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+
+  /* Header (matches the home page) */
+  header { border-bottom: 1px solid var(--grey-300); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .brand { font-weight: 600; letter-spacing: -.01em; text-decoration: none; }
+  .brand span { color: var(--grey-600); font-weight: 500; }
+  .nav-cta { font-size: 15px; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
+
+  h1, h2, h3 { font-weight: 600; letter-spacing: -.02em; margin: 0; }
+  h1 { font-size: clamp(40px, 6.4vw, 76px); line-height: 1.03; max-width: 15ch; }
+  h2 { font-size: clamp(28px, 3.6vw, 40px); line-height: 1.1; }
+  h3 { font-size: clamp(22px, 2.4vw, 28px); line-height: 1.2; }
+  .label { font-size: 16px; font-weight: 500; color: var(--grey-600); margin: 0 0 16px; }
+  .lede { font-size: clamp(19px, 2.2vw, 22px); color: var(--grey-600); max-width: 40ch; margin: 24px 0 0; }
+  p { margin: 0 0 16px; }
+
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .btn { display: inline-block; padding: 16px 26px; font-size: 16px; font-weight: 600; text-decoration: none; border: 1px solid var(--ink); border-radius: 8px; }
+  .btn-solid { background: var(--ink); color: var(--paper); }
+  .btn-line { background: var(--paper); color: var(--ink); border-color: #9A9A9A; }
+  .btn:hover { opacity: .82; }
+  .btn:focus-visible, .nav-cta:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+  /* Hero */
+  .hero { padding: clamp(56px, 9vw, 112px) 0 clamp(40px, 6vw, 64px); }
+
+  /* The service toggle */
+  .switcher { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.94); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border-top: 1px solid var(--grey-300); border-bottom: 1px solid var(--grey-300); }
+  .switcher .wrap { display: flex; align-items: center; justify-content: center; gap: clamp(12px, 2.4vw, 20px); padding-top: 14px; padding-bottom: 14px; }
+  .side { background: none; border: 0; padding: 6px 2px; font: inherit; font-size: clamp(15px, 1.8vw, 18px); font-weight: 600; color: var(--grey-600); cursor: pointer; transition: color .2s ease; text-align: center; }
+  .side.on { color: var(--ink); }
+  .side:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 4px; }
+  .switch { position: relative; flex-shrink: 0; width: 88px; height: 38px; border-radius: 999px; border: 2px solid var(--ink); background: var(--paper); cursor: pointer; padding: 0; transition: background .25s ease; }
+  .switch::after { content: ""; position: absolute; top: 3px; left: 3px; width: 44px; height: 28px; border-radius: 999px; background: var(--ink); transition: transform .25s ease, background .25s ease; }
+  .switch[aria-checked="true"] { background: var(--ink); }
+  .switch[aria-checked="true"]::after { transform: translateX(34px); background: var(--paper); }
+  .switch:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+
+  /* Panels */
+  .panel[hidden] { display: none; }
+  .panel-intro { padding: clamp(48px, 7vw, 88px) 0 8px; }
+  .panel-intro .lede { max-width: 46ch; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; padding: 0; list-style: none; }
+  .facts li { font-size: 14px; font-weight: 500; padding: 7px 14px; border: 1px solid var(--grey-300); border-radius: 999px; color: var(--grey-600); }
+
+  /* Steps: explanation beside a screen grab */
+  .step { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 72px); align-items: center; padding: clamp(48px, 7vw, 88px) 0; border-bottom: 1px solid var(--grey-300); }
+  .step:last-child { border-bottom: 0; }
+  .step:nth-child(even) .copy { order: 2; }
+  .num { font-size: 14px; font-weight: 600; color: var(--grey-600); margin: 0 0 12px; letter-spacing: .02em; }
+  .copy h3 { margin-bottom: 16px; }
+  .copy p { color: var(--grey-600); max-width: 42ch; }
+  .copy ul { margin: 8px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--grey-300); max-width: 42ch; }
+  .copy li { padding: 11px 0; border-bottom: 1px solid var(--grey-300); font-size: 16px; }
+
+  /* Screen frame, like a browser window */
+  .shot { margin: 0; border: 1px solid #C9C9C9; border-radius: 12px; overflow: hidden; background: var(--grey-100); box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 18px 48px -18px rgba(0,0,0,.18); }
+  .shot .bar { display: flex; gap: 6px; padding: 10px 12px; border-bottom: 1px solid var(--grey-300); background: var(--grey-100); }
+  .shot .bar i { width: 10px; height: 10px; border-radius: 50%; background: #CFCFCF; }
+  .shot img { width: 100%; background: var(--paper); cursor: zoom-in; }
+  .shot figcaption { font-size: 13px; color: var(--grey-600); padding: 10px 14px; background: var(--paper); border-top: 1px solid var(--grey-300); }
+
+  /* A text-only card for things that can't be screenshotted (the group chat) */
+  .card { border: 1px solid #9A9A9A; border-radius: 14px; padding: clamp(24px, 4vw, 44px); background: var(--paper); }
+  .chat { display: grid; gap: 10px; }
+  .bubble { max-width: 80%; padding: 12px 16px; border-radius: 16px; font-size: 16px; line-height: 1.4; }
+  .bubble.them { background: var(--grey-100); border-bottom-left-radius: 4px; }
+  .bubble.nick { background: var(--ink); color: var(--paper); margin-left: auto; border-bottom-right-radius: 4px; }
+  .bubble small { display: block; font-size: 12px; opacity: .65; margin-bottom: 2px; }
+
+  /* Panel CTA */
+  .panel-cta { padding: clamp(56px, 8vw, 96px) 0; border-top: 1px solid var(--grey-300); }
+  .panel-cta h2 { max-width: 20ch; }
+  .note { font-size: 14px; color: var(--grey-600); margin: 14px 0 0; }
+
+  /* Lightbox */
+  .lightbox { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,.86); display: none; align-items: center; justify-content: center; padding: 24px; cursor: zoom-out; }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-height: 92vh; width: auto; border-radius: 8px; }
+
+  footer { border-top: 1px solid var(--grey-300); padding: 32px 0; font-size: 14px; color: var(--grey-600); }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+  @media (max-width: 860px) {
+    .step { grid-template-columns: 1fr; gap: 28px; }
+    .step:nth-child(even) .copy { order: 0; }
+  }
+  @media (max-width: 480px) {
+    .switcher .wrap { gap: 10px; }
+    .side { font-size: 14px; max-width: 9em; line-height: 1.25; }
+    .switch { width: 74px; height: 34px; }
+    .switch::after { width: 36px; height: 24px; }
+    .switch[aria-checked="true"]::after { transform: translateX(28px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .switch, .switch::after, .side { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="/">Original Source <span>Training Club</span></a>
+    <a class="nav-cta" href="/#offers">Training options</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="label">Inside the club</p>
+      <h1>See exactly what you get.</h1>
+      <p class="lede">Everything lives in one place, on your phone or laptop. Flip the switch to see inside each way of training.</p>
+    </div>
+  </section>
+
+  <!-- The toggle. Left = OS Training Club (default), right = individual coaching.
+       Link straight to a side with /inside#club or /inside#coaching. -->
+  <div class="switcher">
+    <div class="wrap">
+      <button class="side on" type="button" data-show="club" id="side-club">OS Training Club</button>
+      <button class="switch" type="button" role="switch" aria-checked="false" aria-labelledby="side-coaching" title="Switch between OS Training Club and individual coaching"></button>
+      <button class="side" type="button" data-show="coaching" id="side-coaching">Individual coaching</button>
+    </div>
+  </div>
+
+  <!-- ============ OS TRAINING CLUB ============ -->
+  <div class="panel" id="panel-club" role="region" aria-labelledby="side-club">
+    <div class="wrap">
+      <div class="panel-intro">
+        <p class="label">OS Training Club</p>
+        <h2>One program a month. Three options a day.</h2>
+        <p class="lede">A new program every month, written by Nick. Pick the sessions that fit your goals and your week, and ask anything in the group chat.</p>
+        <ul class="facts">
+          <li>New program every month</li>
+          <li>3 session options a day</li>
+          <li>Any cardio you like</li>
+          <li>Group chat with Nick</li>
+        </ul>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <div class="copy">
+            <p class="num">01 · Your home base</p>
+            <h3>The OS Training Club home.</h3>
+            <p>You get one link. It opens your home page, and everything you need is on it: this month's program, how it works, and every resource.</p>
+            <ul>
+              <li>This month's program, one tap away</li>
+              <li>"Read this to get started" for your first week</li>
+              <li>How the three options and effort levels work</li>
+            </ul>
+          </div>
+          <figure class="shot"><div class="bar"><i></i><i></i><i></i></div>
+            <img src="/inside/club-home.jpg" alt="The OS Training Club home page in Notion, with resources and the monthly program" loading="lazy" width="1800" height="1265">
+          </figure>
+        </article>
+
+        <article class="step">
+          <div class="copy">
+            <p class="num">02 · This month</p>
+            <h3>Every month has a focus.</h3>
+            <p>Each program opens with training notes that explain what the month is for and how the four weeks build. You always know why you're doing what you're doing.</p>
+            <ul>
+              <li>Week 1 settles in, week 3 is the big one</li>
+              <li>Week 4 eases off with a benchmark to beat next month</li>
+              <li>Short on time? Every session has a quick version</li>
+            </ul>
+          </div>
+          <figure class="shot"><div class="bar"><i></i><i></i><i></i></div>
+            <img src="/inside/club-month.jpg" alt="A monthly program page with its training notes" loading="lazy" width="1800" height="1265">
+          </figure>
+        </article>
+
+        <article class="step">
+          <div class="copy">
+            <p class="num">03 · The week</p>
+            <h3>Three options, every day.</h3>
+            <p>Each week is laid out Monday to Sunday. Every day gives you a strength option, an engine option and a power and conditioning option. Do one, two or all three.</p>
+            <ul>
+              <li><b>A: Strength.</b> Weights, 35 to 50 minutes</li>
+              <li><b>B: Engine.</b> Run, row, ride, swim or ski</li>
+              <li><b>C: Power and conditioning.</b> Jumps, sprints, circuits</li>
+            </ul>
+          </div>
+          <figure class="shot"><div class="bar"><i></i><i></i><i></i></div>
+            <img src="/inside/club-week.jpg" alt="A week of the program laid out Monday to Sunday, with A, B and C options each day" loading="lazy" width="1800" height="1265">
+          </figure>
+        </article>
+
+        <article class="step">
+          <div class="copy">
+            <p class="num">04 · A session</p>
+            <h3>Open any session and go.</h3>
+            <p>Tap a session and it's all there: the exercises, sets, reps and effort for each week, with a column for every week of the month. Effort is set by feel, so it scales to your day.</p>
+          </div>
+          <figure class="shot"><div class="bar"><i></i><i></i><i></i></div>
+            <img src="/inside/club-session.jpg" alt="A strength session page with exercises, sets, reps and effort by week" loading="lazy" width="1800" height="1265">
+          </figure>
+        </article>
+
+        <article class="step">
+          <div class="copy">
+            <p class="num">05 · Resources</p>
+            <h3>Help when you need it.</h3>
+            <p>Not sure how a movement goes, or what "tempo" means? It's in the resources, written in plain English.</p>
+            <ul>
+              <li>Exercise library</li>
+              <li>Cardio and plyometric sessions</li>
+              <li>Heart rate zone calculator</li>
+              <li>15 minute mobility routine</li>
+            </ul>
+          </div>
+          <figure class="shot"><div class="bar"><i></i><i></i><i></i></div>
+            <img src="/inside/club-resources.jpg" alt="The exercise library in Notion" loading="lazy" width="1800" height="1265">
+          </figure>
+        </article>
+
+        <article class="step">
+          <div class="copy">
+            <p class="num">06 · The group chat</p>
+            <h3>Ask a question, get a real answer.</h3>
+            <p>You're training with a community of like-minded people, and Nick is in the chat. Ask about a session, swap something that isn't working, or just share a win. No ego, no pressure to perform.</p>
+          </div>
+          <div class="card" aria-label="An example of the group chat">
+            <div class="chat">
+              <p class="bubble them"><small>Member</small>Only got 25 minutes today. Which option?</p>
+              <p class="bubble nick"><small>Nick</small>Do the quick version of A at the top of the session. Twenty minutes still counts.</p>
+              <p class="bubble them"><small>Member</small>Legend, thanks.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <section class="panel-cta">
+      <div class="wrap">
+        <h2>Train with the club.</h2>
+        <p class="lede">Join any month. No class times, no lock-in.</p>
+        <div class="btns">
+          <a class="btn btn-solid" href="https://buy.stripe.com/28E7sKdHIbs1fZJeQw67S0e">Join OS Training Club</a>
+          <a class="btn btn-line" href="/#offers">Compare the options</a>
+        </div>
+        <p class="note">$30 a week, billed every 4 weeks.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ INDIVIDUAL COACHING ============ -->
+  <div class="panel" id="panel-coaching" role="region" aria-labelledby="side-coaching" hidden>
+    <div class="wrap">
+      <div class="panel-intro">
+        <p class="label">Individual coaching</p>
+        <h2>Your own hub, built around you.</h2>
+        <p class="lede">You get a private page with your program, your notes and everything we work on together. This is an example client, Tom.</p>
+        <ul class="facts">
+          <li>Custom program</li>
+          <li>Four-week blocks</li>
+          <li>Check-ins twice a week</li>
+          <li>Remote, wherever you train</li>
+        </ul>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <div class="copy">
+            <p class="num">01 · Your hub</p>
+            <h3>One page with your name on it.</h3>
+            <p>Everything about your training sits on one page. Your program, our meeting notes, your journal and your schedule, plus the club resources.</p>
+            <ul>
+              <li>Program and meeting notes</li>
+              <li>Your journal and weekly schedule</li>
+              <li>Your own heart rate zones</li>
+            </ul>
+          </div>
+          <figure class="shot"><div class="bar"><i></i><i></i><i></i></div>
+            <img src="/inside/coaching-hub.jpg" alt="An example client hub in Notion with links to the program, meeting notes, journal and schedule" loading="lazy" width="1800" height="1028">
+          </figure>
+        </article>
+
+        <article class="step">
+          <div class="copy">
+            <p class="num">02 · Your week</p>
+            <h3>It starts with your week.</h3>
+            <p>Before a single session gets written, you fill in what a normal week of work and life looks like. The program is built to fit around it, so training doesn't add stress to your schedule.</p>
+          </div>
+          <figure class="shot"><div class="bar"><i></i><i></i><i></i></div>
+            <img src="/inside/coaching-schedule.jpg" alt="The weekly schedule page, Monday to Sunday by the hour" loading="lazy" width="1800" height="1125">
+          </figure>
+        </article>
+
+        <article class="step">
+          <div class="copy">
+            <p class="num">03 · Your program</p>
+            <h3>Four-week blocks, explained.</h3>
+            <p>Your program is written in four-week blocks. Each block comes with notes on what changed and why, and how much easy and hard work is in it, so you can see the progression.</p>
+            <ul>
+              <li>Notes from Nick on every block</li>
+              <li>Total, easy and hard minutes tracked</li>
+              <li>Adjusted as you go, when life changes</li>
+            </ul>
+          </div>
+          <figure class="shot"><div class="bar"><i></i><i></i><i></i></div>
+            <img src="/inside/coaching-program.jpg" alt="The program database showing four training blocks with notes and minutes" loading="lazy" width="1800" height="1125">
+          </figure>
+        </article>
+
+        <article class="step">
+          <div class="copy">
+            <p class="num">04 · A block</p>
+            <h3>Day by day, session by session.</h3>
+            <p>Open a block and every day is laid out, with what to do and how hard to go. Your weights sessions sit right underneath, ready to open in the gym.</p>
+          </div>
+          <figure class="shot"><div class="bar"><i></i><i></i><i></i></div>
+            <img src="/inside/coaching-block.jpg" alt="A training block with each day's sessions and the weights sessions below" loading="lazy" width="1800" height="1125">
+          </figure>
+        </article>
+
+        <article class="step">
+          <div class="copy">
+            <p class="num">05 · Your journal</p>
+            <h3>Questions, notes and calls.</h3>
+            <p>Write down anything you want to ask, and we tick it off on our calls. Notes from every call are kept on your hub, so nothing gets lost between check-ins.</p>
+          </div>
+          <figure class="shot"><div class="bar"><i></i><i></i><i></i></div>
+            <img src="/inside/coaching-journal.jpg" alt="The journal page with training questions, weights and cardio notes" loading="lazy" width="1800" height="984">
+          </figure>
+        </article>
+
+        <article class="step">
+          <div class="copy">
+            <p class="num">06 · Your zones</p>
+            <h3>Effort that's yours.</h3>
+            <p>Put in your max and resting heart rate and your zones are worked out for you, with steps to load them onto your Garmin or Apple Watch.</p>
+          </div>
+          <figure class="shot"><div class="bar"><i></i><i></i><i></i></div>
+            <img src="/inside/coaching-zones.jpg" alt="The heart rate zone calculator" loading="lazy" width="1800" height="1125">
+          </figure>
+        </article>
+      </div>
+    </div>
+
+    <section class="panel-cta">
+      <div class="wrap">
+        <h2>Get a program built around you.</h2>
+        <p class="lede">It starts with a quick call on your goals and where you're at.</p>
+        <div class="btns">
+          <a class="btn btn-solid" href="mailto:nick@originalsource.co?subject=Individual%20coaching">Enquire about coaching</a>
+          <a class="btn btn-line" href="/#offers">Compare the options</a>
+        </div>
+        <p class="note">$110 a week, billed every 12 weeks. Nick replies personally.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<div class="lightbox" role="dialog" aria-label="Enlarged screenshot" tabindex="-1"><img alt=""></div>
+
+<footer>
+  <div class="wrap">
+    <span>Original Source Training Club</span>
+    <a href="https://instagram.com/ostrainingclub">@ostrainingclub</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var sw = document.querySelector('.switch');
+  var sides = document.querySelectorAll('.side');
+  var panels = { club: document.getElementById('panel-club'), coaching: document.getElementById('panel-coaching') };
+  var current = 'club';
+
+  function show(which, keepScroll) {
+    current = which;
+    var coaching = which === 'coaching';
+    sw.setAttribute('aria-checked', coaching ? 'true' : 'false');
+    sw.setAttribute('aria-labelledby', coaching ? 'side-club' : 'side-coaching');
+    sides.forEach(function (s) { s.classList.toggle('on', s.dataset.show === which); });
+    panels.club.hidden = coaching;
+    panels.coaching.hidden = !coaching;
+    if (history.replaceState) history.replaceState(null, '', '#' + which);
+    if (!keepScroll) {
+      var bar = document.querySelector('.switcher');
+      var top = bar.getBoundingClientRect().top + window.pageYOffset;
+      if (window.pageYOffset > top) window.scrollTo(0, top);
+    }
+  }
+
+  sw.addEventListener('click', function () { show(current === 'club' ? 'coaching' : 'club'); });
+  sides.forEach(function (s) { s.addEventListener('click', function () { show(s.dataset.show); }); });
+
+  var start = location.hash.replace('#', '');
+  if (start === 'coaching' || start === 'club') show(start, true);
+
+  // Tap a screenshot to see it bigger
+  var box = document.querySelector('.lightbox'), big = box.querySelector('img');
+  document.querySelectorAll('.shot img').forEach(function (img) {
+    img.addEventListener('click', function () { big.src = img.src; big.alt = img.alt; box.classList.add('open'); box.focus(); });
+  });
+  box.addEventListener('click', function () { box.classList.remove('open'); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') box.classList.remove('open'); });
+})();
+</script>
+</body>
+</html>
