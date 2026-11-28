@@ -402,6 +402,7 @@
           </ul>
           <p class="for">For you if you want structure and a coach in your corner, train for more than one thing, or have fallen off programs before.</p>
           <a class="btn btn-solid" href="https://buy.stripe.com/28E7sKdHIbs1fZJeQw67S0e">Join OS Training Club</a>
+          <p class="note trial-note">First 4 weeks free if you join before 1 January.</p>
           <p class="note">$30 a week, billed every 4 weeks.</p>
         </article>
 
@@ -564,14 +565,14 @@
 <div class="promo" id="promo" role="dialog" aria-modal="true" aria-labelledby="promo-title" hidden>
   <div class="promo-card">
     <button class="promo-close" type="button" aria-label="Close" data-close>&times;</button>
-    <p class="label">Individual coaching, until 1 January</p>
+    <p class="label">Until 1 January</p>
     <h2 id="promo-title">Your first 4 weeks are free.</h2>
-    <p>Start individual coaching before 1 January and your first 4 weeks are on us. Kick off the year with more energy, more strength and a program built around your week.</p>
+    <p>Join OS Training Club or start individual coaching before 1 January and your first 4 weeks are on us. Kick off the year with more energy, more strength and training built around your week.</p>
     <div class="btns">
-      <a class="btn btn-solid" href="https://buy.stripe.com/5kQ4gycDEbs1dRB6k067S0f">Claim your free 4 weeks</a>
+      <a class="btn btn-solid" href="#offers" data-close>Choose your free 4 weeks</a>
       <button class="btn btn-line" type="button" data-close>Not now</button>
     </div>
-    <p class="fine">Then $110 a week, billed every 4 weeks. Your card is taken at checkout and first charged after 28 days. Cancel any time.</p>
+    <p class="fine">Then $30 a week for the Club or $110 a week for individual coaching, billed every 4 weeks. Your card is taken at checkout and first charged after 28 days. Cancel any time.</p>
   </div>
 </div>
 
@@ -579,8 +580,7 @@
 (function () {
   // Offer ends at midnight Melbourne time on 1 January 2027.
   var live = Date.now() < Date.parse('2027-01-01T00:00:00+11:00');
-  var note = document.querySelector('.trial-note');
-  if (!live) { if (note) note.hidden = true; return; }
+  if (!live) { document.querySelectorAll('.trial-note').forEach(function (n) { n.hidden = true; }); return; }
   var promo = document.getElementById('promo');
   if (!promo) return;
   var KEY = 'ost-trial-promo-seen';
