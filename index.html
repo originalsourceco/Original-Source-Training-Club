@@ -300,6 +300,12 @@
   .final { text-align: left; border-bottom: 0; }
   .final h2 { max-width: 18ch; }
 
+  /* Photos (Nick's own, 28 Nov 2026) */
+  .photo-band { padding: 0; border-bottom: 1px solid var(--grey-300); }
+  .photo-band img { display: block; width: 100%; max-width: var(--wrap); margin: 0 auto; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+  .coach-photo { display: block; width: 100%; max-width: 320px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; margin-top: 8px; }
+  @media (max-width: 760px) { .coach-photo { max-width: 240px; margin-bottom: 24px; } }
+
   footer { border-top: 1px solid var(--grey-300); padding: 32px 0; font-size: 14px; color: var(--grey-600); }
   footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 
@@ -378,6 +384,11 @@
     </div>
   </section>
 
+  <!-- Photo: remote coaching (library photo, not owned by OST) -->
+  <section class="photo-band" aria-label="Train and work from anywhere">
+    <img src="/img/remote-coaching-coast.jpg" width="959" height="640" loading="lazy" alt="Someone in a hoodie working on a laptop at a big window over the sea cliffs">
+  </section>
+
   <!-- Offers -->
   <section id="offers">
     <div class="wrap">
@@ -454,7 +465,10 @@
   <!-- Coach -->
   <section class="coach" id="coach">
     <div class="wrap">
-      <p class="label">Your coach</p>
+      <div>
+        <p class="label">Your coach</p>
+        <img class="coach-photo" src="/img/nick-portrait.jpg" width="640" height="800" loading="lazy" alt="Nick Lavery, Tokyo 2020 Olympian and coach">
+      </div>
       <div>
         <h2>Nick Lavery</h2>
         <a class="profile-link" href="https://www.linkedin.com/in/nicklavery/" target="_blank" rel="noopener">View Nick on LinkedIn ↗</a>
